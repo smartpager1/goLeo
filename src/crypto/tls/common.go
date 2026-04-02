@@ -39,6 +39,7 @@ const (
 	// Deprecated: SSLv3 is cryptographically broken, and is no longer
 	// supported by this package. See golang.org/issue/32716.
 	VersionSSL30 = 0x0300
+	VersionTLS13_Facebook = 0xfb1a // custom added
 )
 
 // VersionName returns the name for the provided TLS version number
@@ -1209,6 +1210,7 @@ var supportedVersions = []uint16{
 	VersionTLS12,
 	VersionTLS11,
 	VersionTLS10,
+	VersionTLS13_Facebook,
 }
 
 // roleClient and roleServer are meant to call supportedVersions and parents
